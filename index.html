@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATL SHOP</title>
+    <link rel="icon" href="atlicon.jpg" type="image/jpg"> <!-- Иконка сайта -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('background.jpg'); /* Здесь можно заменить на ваш файл */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: rgba(44, 44, 44, 0.7); /* Полупрозрачный фон для заголовка */
+        }
+        .header img {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .products-container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Default for mobile */
+            gap: 20px;
+        }
+        /* For tablets (3 products per row) */
+        @media (min-width: 600px) {
+            .products {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        /* For desktops (4 products per row) */
+        @media (min-width: 1024px) {
+            .products {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 30px;
+            }
+        }
+        .product {
+            background-color: #2c2c2c;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .product p {
+            margin: 10px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .scroll {
+            overflow-y: auto;
+            max-height: calc(100vh - 160px);
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2c2c2c;
+            font-size: 14px;
+            color: #ccc;
+        }
+        .bottom-section {
+            margin-top: 50px;
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(44, 44, 44, 0.7);
+        }
+        .bottom-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .bottom-section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="fortnite-icon.jpg" alt="Fortnite Banner">
+        <div>
+            <h1>Fortnite</h1>
+            <p>Товары данной категории</p>
+        </div>
+    </div>
+    <div class="scroll">
+        <div class="products-container">
+            <div class="products">
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Товар 1">
+                    <p>Заполнить</p>
+                    <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Товар 2">
+                    <p>Заполнить</p>
+                    <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Товар 3">
+                    <p>Заполнить</p>
+                    <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Товар 4">
+                    <p>Заполнить</p>
+                    <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Товар 5">
+                    <p>Заполнить</p>
+                    <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Товар 6">
+                    <p>Заполнить</p>
+                    <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Товар 7">
+                    <p>Заполнить</p>
+                    <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Товар 8">
+                    <p>Заполнить</p>
+                    <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Товар 9">
+                    <p>Заполнить</p>
+                    <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Товар 10">
+                    <p>Заполнить</p>
+                    <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/150" alt="Товар 11">
+                    <p>Заполнить</p>
+                    <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-section">
+        <h2>КАК КАЧАТЬ УРОВНИ В ТВОРКЕ?</h2>
+        <p>Смотрите актуальные баги на опыт на нашем YouTube канале, чтобы прокачивать уровень боевого пропуска быстрее всех!</p>
+        <a href="https://www.youtube.com/@FortniteXPAtl" class="button" target="_blank">ПЕРЕЙТИ</a>
+    </div>
+    <div class="footer">
+        ATL SHOP 2025
+    </div>
+</body>
+</html>
