@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATL SHOP</title>
-    <link rel="icon" href="https://i.postimg.cc/g2wxv2FY/atlicon.jpg" type="image/jpg"> <!-- Иконка сайта -->
+    <link rel="icon" href="https://i.postimg.cc/g2wxv2FY/atlicon.jpg" type="image/jpg">
     <style>
         body {
             margin: 0;
@@ -13,10 +13,11 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            background-image: url('https://i.postimg.cc/hGkTJ7XW/background.jpg'); /* Здесь можно заменить на ваш файл */
+            background-image: url('https://i.postimg.cc/hGkTJ7XW/background.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            overflow: hidden;
         }
         .header {
             display: flex;
@@ -24,7 +25,7 @@
             justify-content: center;
             gap: 20px;
             padding: 20px;
-            background-color: rgba(44, 44, 44, 0.7); /* Полупрозрачный фон для заголовка */
+            background-color: rgba(44, 44, 44, 0.7);
         }
         .header img {
             width: 60px;
@@ -42,16 +43,14 @@
         }
         .products {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Default for mobile */
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
-        /* For tablets (3 products per row) */
         @media (min-width: 600px) {
             .products {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
-        /* For desktops (4 products per row) */
         @media (min-width: 1024px) {
             .products {
                 grid-template-columns: repeat(4, 1fr);
@@ -77,19 +76,19 @@
             margin: 10px 0;
         }
         .product .name {
-            font-weight: bold; /* Название товара жирным */
+            font-weight: bold;
             font-size: 18px;
         }
         .product .price {
-            font-size: 14px; /* Цена товара меньше */
-            font-weight: normal; /* Обычный шрифт для цены */
+            font-size: 14px;
+            font-weight: normal;
             color: #fff;
         }
         .button {
             display: inline-block;
             padding: 10px 20px;
             margin-top: 10px;
-            background-color: #4fa3d1; /* Голубовато-синий цвет */
+            background-color: #4fa3d1;
             color: #fff;
             text-decoration: none;
             border-radius: 6px;
@@ -97,7 +96,7 @@
             transition: background-color 0.3s ease;
         }
         .button:hover {
-            background-color: #3e91b4; /* Немного темнее при наведении */
+            background-color: #3e91b4;
         }
         .scroll {
             overflow-y: auto;
@@ -124,6 +123,24 @@
             font-size: 16px;
             margin-bottom: 20px;
         }
+        /* Стили для снега */
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: #fff;
+            font-size: 12px;
+            z-index: 1000;
+            animation: fall linear infinite;
+            pointer-events: none;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
     </style>
 </head>
 <body>
@@ -140,66 +157,65 @@
                 <div class="product">
                     <img src="https://i.postimg.cc/G2RZSccy/IMG-2603.jpg" alt="Товар 1">
                     <p class="name">1000 в-баксов</p>
-                    <div class="price">759₽</div> <!-- Цена товара -->
-                    <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
+                    <div class="price">759₽</div>
+                    <a href="https://atlshop1000vb.netlify.app/" class="button">Перейти к товару</a>
                 </div>
                 <div class="product">
                     <img src="https://i.postimg.cc/Nj9qKJJ5/IMG-2604.jpg" alt="Товар 2">
                     <p class="name">2800 в-баксов</p>
-                    <div class="price">1999₽</div> <!-- Цена товара -->
+                    <div class="price">1999₽</div>
                     <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
                 </div>
                 <div class="product">
                     <img src="https://i.postimg.cc/6pksnrgz/IMG-2605.jpg" alt="Товар 3">
                     <p class="name">5000 в-баксов</p>
-                    <div class="price">3500₽</div> <!-- Цена товара -->
+                    <div class="price">3500₽</div>
                     <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
                 </div>
                 <div class="product">
                     <img src="https://i.postimg.cc/8CM2HFVG/IMG-2606.jpg" alt="Товар 4">
                     <p class="name">13500 в-баксов</p>
-                    <div class="price">7799₽</div> <!-- Цена товара -->
+                    <div class="price">7799₽</div>
                     <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
                 </div>
                 <div class="product">
                     <img src="https://i.postimg.cc/kGcWCy3c/IMG-2623.jpg" alt="Товар 5">
                     <p class="name">Цунами</p>
-                    <div class="price">439₽</div> <!-- Цена товара -->
+                    <div class="price">439₽</div>
                     <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
                 </div>
                 <div class="product">
                     <img src="https://i.postimg.cc/6qG8QLvR/IMG-2621.jpg" alt="Товар 6">
                     <p class="name">Гульпанк (СсБ набор)</p>
-                    <div class="price">1399₽</div> <!-- Цена товара -->
+                    <div class="price">1399₽</div>
                     <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
                 </div>
                 <div class="product">
                     <img src="https://i.postimg.cc/zDL7hsww/IMG-2625.jpg" alt="Товар 7">
-                    <p class="name">Идеальная стратегия (LEGO набор)</p>
-                    <div class="price">379₽</div> <!-- Цена товара -->
+                    <p class="name">Идеальная стратегия</p>
+                    <div class="price">379₽</div>
                     <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
                 </div>
                 <div class="product">
                     <img src="https://i.postimg.cc/PNsPvpW7/IMG-2619.jpg" alt="Товар 8">
-                    <p class="name">Месячная подписка "Отряд Fortnite"</p>
-                    <div class="price">499-599₽</div> <!-- Цена товара -->
+                    <p class="name">Отряд Fortnite</p>
+                    <div class="price">499-599₽</div>
                     <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
                 </div>
                 <div class="product">
                     <img src="https://i.postimg.cc/3RNysHrt/IMG-2631.jpg" alt="Товар 9">
                     <p class="name">Подарки на ваш аккаунт</p>
-                    <div class="price">Варьируемая цена</div> <!-- Цена товара -->
+                    <div class="price">Варьируемая цена</div>
                     <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
                 </div>
                 <div class="product">
                     <img src="https://i.postimg.cc/sXLBy0vs/IMG-2629.jpg" alt="Товар 10">
-                    <p class="name">Смена региона вашего Epic Games аккаунта</p>
+                    <p class="name">Смена региона Epic Games</p>
                     <div class="price">149₽</div> <!-- Цена товара -->
                     <a href="https://t.me/atl_shopbot" class="button" target="_blank">Перейти к товару</a>
                 </div>
             </div>
         </div>
-    </div>
     <div class="bottom-section">
         <h2>КАК КАЧАТЬ УРОВНИ В ТВОРКЕ?</h2>
         <p>Смотрите актуальные баги на опыт на нашем YouTube канале, чтобы прокачивать уровень боевого пропуска быстрее всех!</p>
@@ -208,5 +224,19 @@
     <div class="footer">
         ATL SHOP 2025
     </div>
+    <script>
+        // Генерация снежинок
+        const createSnowflake = () => {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❄';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.fontSize = Math.random() * 11 + 11 + 'px';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(snowflake);
+            setTimeout(() => snowflake.remove(), 5000);
+        };
+        setInterval(createSnowflake, 100); // Добавляем снежинку каждые 100 мс
+    </script>
 </body>
 </html>
